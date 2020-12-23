@@ -1,0 +1,64 @@
+body{
+    background-color: rgb(209, 166, 94);
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+}
+
+main 
+{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+header{
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(215, 210, 180), rgb(163, 152, 90));
+    border: 1px, bold, black;
+    margin-bottom: 0px;
+    padding-bottom: 15px;
+}
+
+#ksiazkazdjecie
+{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+header h1,h2{
+    color: rgb(124, 92, 11);
+    font-family: "edwardian script itc", cursive;
+    text-align: center;
+}
+
+#menuglowne
+{
+    padding-top: 20px;
+    list-style-type: none;
+    margin: 0px;
+}
+
+#menuglowne li
+{
+    display: inline;
+    margin: 20px;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+article{
+    margin-top: 0px;
+    background-color: white;
+    padding-left: 20%;
+}
+
+article > h3{
+    padding-top: 20px;
+    margin-top: 0px;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superaśny formularz zawierający uwagi i dwie płcie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form name="formularz" method="post">
+        <label>
+            Imię: <br>
+            <input type="text" name="name" id="name"> <br>
+            Nazwisko: <br>
+            <input type="text" name="surname" id="surname"> <br>
+            <label>
+                Płeć: <br>
+                <input type="radio" name="sexm" id="sexm"> mężczyza <br>
+                <input type="radio" name="sexf" id="sexf"> kobieta <br>
+            </label>
+            Wiek: <br>
+            <input type="number" name="age" min="0" max="18" id="age" placeholder="0-18"> <br>
+            Uwagi: <br>
+            <label>
+                <textarea name="" id="" cols="21" rows="10"></textarea>
+                <br>
+            </label>
+            <input type="submit" value="wyślij">
+        </label>
+    </form>
+</body>
+
+</html>

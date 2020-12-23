@@ -1,0 +1,29 @@
+body{
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+nav{
+    height: 40vh;
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 20%;
+    flex-direction: column;
+
+}
+.items
+{
+    display: flex;
+    background-color: white;
+    width: 80%;
+    height: 20%;
+    align-items: center;
+    border-right: 2em solid black;
+    color: blue;
+    font-size: 2em;
+    padding-left: 5%;
+    font-weight: bolder;
+}

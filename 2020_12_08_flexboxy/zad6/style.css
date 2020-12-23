@@ -1,0 +1,47 @@
+.container-1 {
+  display: flex;
+  margin: 25px;
+}
+
+.container-1 div,
+.container-2 div,
+.container-3 div {
+  background-color: #9ab2db;
+  border: 1px solid;
+  padding: 15px;
+}
+.box-1,
+.box-2 {
+  flex: 1;
+}
+.box-3 {
+  flex: 3;
+}
+.container-2 {
+  display: flex;
+  margin: 25px;
+  align-items: center;
+  background-color: black;
+}
+.box-4 {
+  flex: 2;
+  order: 2;
+}
+.box-5 {
+  flex: 1;
+  order: 3;
+}
+.box-6 {
+  flex: 1;
+  order: 1;
+}
+.container-3 {
+  display: flex;
+  margin: 25px;
+  justify-content: space-between;
+}
+
+.container-3-box
+{
+    flex-basis: 25%;
+}

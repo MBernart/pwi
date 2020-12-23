@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+
+    <style>
+        fieldset {
+
+            width: 50%;
+            margin-right: 25%;
+            margin-left: 25%;
+        }
+
+        form {
+            text-align: center;
+            line-height: 2em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form name="rejestracja" action="" method="get">
+        <fieldset>
+            <legend>Wszystkie pola oprócz numeru telefonu należy wypełnić</legend>
+            <label for="">
+                Login: <input type="text" name="login" id="login"> <br>
+                Email: <input type="email" name="email" id="email"> <br>
+                Hasło: <input type="password" name="password" id="password"> <br>
+                Powtórz hasło: <input type="password" name="password" id="password"> <br>
+                Telefon: <input type="tel" name="tel" id="tel"> <br>
+                Logowanie po rejestracji: <input type="checkbox" name="logowanie_po_rejestracji"
+                    id="logowanie_po_rejestracji"><br>
+            </label>
+            <label for="">
+                <input type="submit" value="Rejestracja">
+                <input type="reset" value="Wartości początkowe">
+            </label>
+
+        </fieldset>
+
+
+    </form>
+
+</body>
+
+</html>

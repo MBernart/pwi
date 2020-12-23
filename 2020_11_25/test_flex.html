@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test flexów</title>
+    <style>
+        #main {
+            display: flex;
+            width: 30%;
+            /* flex-basis: 50px; */
+            align-content: flex-end;
+
+        }
+
+        #main div:nth-of-type(2) {
+            flex-basis: 50px;
+        }
+
+        #main div:nth-of-type(1) {
+            flex-grow: 2;
+        }
+
+        #main div:nth-of-type(3) {
+            display: flex;
+            flex-grow: 5;
+            flex-wrap: wrap;
+            align-content: flex-end;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div style="background-color: coral;">A <br> d</div>
+        <div style="background-color: lightblue; ">B</div>
+        <div style="background-color: khaki;">C</div>
+    </div>
+</body>
+
+</html>

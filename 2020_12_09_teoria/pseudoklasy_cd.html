@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <title>pseudoklasy</title>
+    <meta charset="UTF-8" />
+    <style>
+      div:first-of-type {
+        color: red;
+      }
+
+      div:not(:hover) {
+        font-weight: bold;
+      }
+      div :not(div) {
+        text-decoration: underline;
+      }
+      div :only-of-type {
+        background-color: chartreuse;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>Jestem jedynym dzieckiem.</div>
+    </div>
+
+    <div>
+      <div>Jestem pierwszysm bratem</div>
+      <div>Jestem drugim bratem</div>
+      <div>
+        <p>Jestem trzecim bratem</p>
+        <div>a to jedyne dziecko.</div>
+      </div>
+    </div>
+  </body>
+</html>
