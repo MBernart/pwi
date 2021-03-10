@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Mateusz i Bernart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!--
+Pobierz od użytkownika z pola input ile dni miał wypożyczone ksiązki, 
+
+załóż, że mógł mieć książkę między 4 a 8 dni, 
+
+jeśli oddał ją w terminie nalicz rabat 10% od całej kwoty i wyświetl wynik do zapłaty w p o id="wynik" 
+
+jeśli zaznaczył pole checkbox dolicz jeszcze 10% KOSZT ZA JEDEN DZIEŃ WYPOŻYCZENIA to 12zł; 
+
+użyj zadarzenia jako atrybutu onclick;-->
+
+    <h1>Koszt wypożyczenia</h1>
+    <input type="text" id="zad1" placeholder="ile dni" /><br />
+
+    <input type="checkbox" id="ile" />czy więcej niż jedną?<br />
+
+    <button id="btn">oblicz koszt wypożyczenia</button>
+
+    <p id="wynik"></p>
+
+    <script>
+      document.getElementById("btn").onclick = () => {
+        // parsujemy do Inta
+        var dni = parseInt(document.getElementById("zad1").value);
+        // iloczyn ceny za dzień i dni
+        var koszt = 12 * dni;
+        // zakładam, że przedziały są domknięte
+        // sprawdzam przedział czasowy
+        if (dni >= 4 && dni <= 8) {
+          koszt *= 0.9;
+        }
+        // sprawdzam czy miał więcej niż jedną książkę
+        if (document.getElementById("ile").checked) {
+          koszt *= 1.1;
+        }
+        // wypisuję wynik
+        document.getElementById(
+          "wynik"
+        ).innerHTML = `Łączny koszt to: ${koszt}`;
+      };
+    </script>
+  </body>
+</html>

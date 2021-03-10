@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kawusia</title>
+  </head>
+  <body>
+    <span>Ilość gości: </span>
+    <input type="text" name="" id="guest" /> <br />
+    <br />
+    <span>Czy poprawiny?</span>
+    <input type="checkbox" name="" id="pop" /> <br />
+    <br />
+    <button id="btn">Potiwerdź</button>
+    <span id="wynik"></span>
+    <script>
+      document.getElementById("btn").onclick = () => {
+        let guest = parseInt(document.getElementById("guest").value);
+        if (document.getElementById("pop").checked) {
+          document.getElementById("wynik").innerText = guest * 100 * 1.3 + ",-";
+        } else {
+          document.getElementById("wynik").innerText = guest * 100 + ",-";
+        }
+      };
+    </script>
+  </body>
+</html>

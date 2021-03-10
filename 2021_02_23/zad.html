@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>BESOS</h1>
+    <p>klasa 3d</p>
+    <p>klasa 3c</p>
+    <p>klasa 3 jakaś</p>
+    <button>fontsize</button>
+    <button>colour</button>
+    <button>text decoration</button>
+    <script>
+      let akapity = document.querySelectorAll("p");
+      let buttons = document.querySelectorAll("button");
+      buttons[0].onclick = () => {
+        for (size of akapity) {
+          size.style.fontSize = "32px";
+        }
+      };
+      buttons[1].onclick = () => {
+        akapity.forEach((element) => {
+          element.style.color = "darkgreen";
+        });
+      };
+      buttons[2].onclick = () => {
+        for (dec of akapity) {
+          dec.style.textDecoration = "line-through";
+        }
+      };
+    </script>
+  </body>
+</html>

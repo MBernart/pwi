@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    zad1: <br />
+    <label for="">
+      <input type="number" name="numerek" id="numerek" />
+      <button id="potwierdz">potwierdz</button>
+    </label>
+    <p id="parzyste"></p>
+    zad2: <br />
+    <label for="">
+      <button id="potwierdz3">podaj elementy do sortowania: </button>
+    </label>
+    <p id="sort"></p>
+    zad3: <br />
+    <label for="">
+      <input type="number" name="numerek1" id="numerek1" />
+      <button id="potwierdz1">potwierdz</button>
+    </label>
+    <p id="ocena"></p>
+    zad4: <br />
+    <label for="">
+      <input type="number" name="numerek2" id="numerek2" />
+      <button id="potwierdz2">potwierdz</button>
+    </label>
+    <p id="prawidlowe"></p>
+
+    <script>
+      document.getElementById("potwierdz3").onclick = () => {
+        const tab = [];
+        for (let i = 0; i < 3; i++) {
+          tab.push(Number(prompt(`Podaj ${i + 1} liczbę: `)));
+        }
+        document.getElementById("sort").innerText = tab.sort();
+      };
+
+      document.getElementById("potwierdz2").onclick = () => {
+        var wartosc = parseInt(document.getElementById("numerek2").value);
+        if ((wartosc > 1 && wartosc != 3 && wartosc != 8) || wartosc == -2)
+          document.getElementById("prawidlowe").innerText = "spełnia warunki";
+        else
+          document.getElementById("prawidlowe").innerText =
+            "nie spełnia warunków";
+      };
+
+      document.getElementById("potwierdz1").onclick = () => {
+        var liczba = Number(document.getElementById("numerek1").value);
+        switch (liczba) {
+          case 1:
+            document.getElementById("ocena").innerHTML = "niedostateczny";
+            break;
+          case 2:
+            document.getElementById("ocena").innerHTML = "dopuszczający";
+            break;
+          case 3:
+            document.getElementById("ocena").innerHTML = "dostateczny";
+            break;
+          case 4:
+            document.getElementById("ocena").innerHTML = "dobry";
+            break;
+          case 5:
+            document.getElementById("ocena").innerHTML = "bardzo dobry";
+            break;
+          case 6:
+            document.getElementById("ocena").innerHTML = "celujący";
+            break;
+          default:
+            document.getElementById("ocena").innerHTML =
+              "Niepoprawny format oceny!!!";
+        }
+      };
+
+      document.getElementById("potwierdz").onclick = () => {
+        var liczba = Number(document.getElementById("numerek").value);
+        var messageBox = document.getElementById("parzyste");
+        if (liczba % 2 == 0) messageBox.innerHTML = `${liczba} jest parzysta`;
+        else messageBox.innerHTML = `${liczba} jest nieparzysta`;
+      };
+    </script>
+  </body>
+</html>

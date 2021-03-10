@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Liczba kilometrow: <input type="number" name="" id="kilometry" /><br />
+    Miejscowosc: <input type="text" name="" id="miejscowosc" /> <br />
+    <button id="btn" onclick="km()">Oblicz</button>
+    <p id="wynik"></p>
+
+    <script>
+      function km() {
+        let km = Number(document.getElementById("kilometry").value);
+        let m = document.getElementById("miejscowosc").value;
+        switch (m) {
+          case "mosina":
+            document.getElementById("wynik").innerHTML = "masz rabat";
+            break;
+          default:
+            document.getElementById("wynik").innerHTML = "nic!!";
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
