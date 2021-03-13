@@ -30,7 +30,21 @@
     <div></div>
     <div></div>
     <script>
-      document.querySelectorAll("div").forEach((i) => {i.addEventListener("mouseover", () => document.querySelector("body").style.backgroundColor = window.getComputedStyle(i, null).getPropertyValue("background-color")); i.addEventListener("mouseout", () => document.querySelector("body").style.backgroundColor = "white")});
+      document.querySelectorAll("div").forEach((i) => {
+        i.addEventListener(
+          "mouseover",
+          () =>
+            (document.querySelector(
+              "body"
+            ).style.backgroundColor = window
+              .getComputedStyle(i, null)
+              .getPropertyValue("background-color"))
+        );
+        i.addEventListener(
+          "mouseout",
+          () => (document.querySelector("body").style.backgroundColor = "white")
+        );
+      });
     </script>
   </body>
 </html>
