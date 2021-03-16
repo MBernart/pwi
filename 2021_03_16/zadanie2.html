@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      .ppp {
+        text-transform: lowercase;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea id="asd"></textarea>
+    <button id="btn">zmień</button>
+    <p id="a"></p>
+    <p id="b"></p>
+    <script>
+      document.getElementById("btn").addEventListener("mouseover", () => {
+        let napis = document.querySelector("#asd");
+        document.getElementById("a").style.textTransform = "uppercase";
+        document.getElementById("a").innerHTML = `<b> ${napis.value}</b>`;
+
+        document.getElementById("b").classList.add("ppp");
+        document.getElementById("b").innerHTML = napis.value;
+      });
+    </script>
+  </body>
+</html>
