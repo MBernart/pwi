@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <title>js kartkówka</title>
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <h1>Sprawdzamy umiejętności</h1>
+    <div>
+      <p>Akapit pierwszy</p>
+      <p>Akapit drugi</p>
+      <p>Akapit trzeci</p>
+      <a href="#">odnośnik, który jest dzieckiem</a>
+    </div>
+    <a href="#">odnośnik, który jest samodzielny</a>
+    <p>Akapit czwarty</p>
+    <div class="asd">
+      <p>Akapit</p>
+    </div>
+    <button>zmiana 1</button>
+    <button>zmiana 2</button>
+    <button>zmiana 3</button>
+
+    <!--Napisz skrypt, który przypisze zdarzenia metodą addEventListener- click -  do przycisków:
+
+        1. przycisk 1 - ma przekreślić czcionkę wszystkich elementów <p>
+        
+        2. przycisk 2 - ma dodać tło do  elementu <a> dziecka div
+
+        3. przycisk 3 - ma zmienić przeźroczystość czcionki dla wszystkich <p> które są dziećmi <div> o klasie .asd ustaw ją na 0.5
+
+        NIE WOLNO DODAWAĆ WŁASNYCH ATRYBUTÓW, stosuj tylko metody querySelector, querySelectorAll, getElementsByClassName, getElementsByTagName
+        -->
+
+    <script>
+      let guziki = document.getElementsByTagName("button");
+
+      guziki[0].addEventListener("click", () => {
+        document.querySelectorAll("p").forEach((element) => {
+          element.style["text-decoration"] = "line-through";
+        });
+      });
+
+      guziki[1].addEventListener("click", () => {
+        document
+          .querySelectorAll("div>a")
+          .forEach((element) => (element.style.backgroundColor = "hotpink"));
+      });
+
+      guziki[2].addEventListener("click", () => {
+        document
+          .querySelectorAll("div.asd > p")
+          .forEach((element) => (element.style.opacity = 0.5));
+      });
+    </script>
+  </body>
+</html>
