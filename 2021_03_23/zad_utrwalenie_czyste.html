@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <title>DOM, dynamiczna zmiana html - l20cw3</title>
+    <style>
+      body {
+        background-color: #002255;
+        color: #fff;
+        font-size: 18px;
+      }
+      div {
+        padding: 50px;
+        border: 3px white solid;
+        height: 400px;
+        width: 400px;
+        background-color: black;
+        margin: 20px auto;
+      }
+      .light {
+        background-color: #eee;
+        color: blue;
+        height: 400px;
+        width: 400px;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Włącz światło</button>
+    <div>
+      <h3>Ciemno</h3>
+      <img src="e1.jpg" />
+    </div>
+
+    <script>
+      document.querySelector("button").addEventListener("click", () => {
+        if (
+          document.querySelector("button").textContent.toLocaleLowerCase() ==
+          "włącz światło"
+        ) {
+          document.querySelector("button").innerText = "Wyłącz światło";
+          document.querySelector("img").src = "e2.jpg";
+          document.querySelector("div").classList.add("light");
+          document.querySelector("h3").innerText = "Jasność!";
+        }
+		else {
+			document.querySelector("img").src = "e1.jpg";
+			document.querySelector("div").classList.remove("light");
+			document.querySelector("h3").innerText = "Cliemność!"
+			document.querySelector("button").innerText = "Włącz światło"
+		}
+      });
+    </script>
+  </body>
+</html>

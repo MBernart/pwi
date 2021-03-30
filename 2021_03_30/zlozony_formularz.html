@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formularz na sterydach</title>
+    <style>
+      .ukryj {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>formularz</h2>
+    <input type="text" placeholder="podaj imię" id="imie" /> <br />
+    <input type="text" placeholder="podaj nazwisko" id="nazwisko" /> <br />
+    <br />
+    <label>
+      Podaj płeć: <br />
+      <input type="radio" name="sex" value="mężczyzna" checked />mężczyzna
+      <br />
+      <input type="radio" name="sex" value="kobieta" />kobieta <br />
+    </label>
+    <br />
+    <label for="stan_cywilny">stan cywilny: </label>
+    <select id="stan_cywilny">
+      <option value="wybierz" selected>wybierz</option>
+      <option value="kawaler">kawaler</option>
+      <option value="panna">panna</option>
+    </select>
+    <br /><br />
+    Zainteresowania: <br />
+    kąkukery <input type="checkbox" value="komputery" /> <br />
+    muzyka <input type="checkbox" value="muzyka" /> <br />
+    książka <input type="checkbox" value="ksiazka" /> <br />
+    motoryzacja <input type="checkbox" value="motoryzacja" /> <br />
+    <br />
+    odkryj/ukryj opis dodatkowy <input type="checkbox" value="opis" id="opis" />
+    <br />
+    <textarea class="ukryj"></textarea> <br />
+    <button id="btn">Podsumowanie</button>
+    <p id="wszystko"></p>
+    <script>
+      document
+        .getElementById("opis")
+        .addEventListener("click", () =>
+          document.querySelector("textarea").classList.toggle("ukryj")
+        );
+
+      btn.addEventListener("click", () => {
+        wszystko.innerHTML = "<h4> Podsumowanie: </h4>";
+        let sex;
+        document.querySelectorAll("input[type=radio]").forEach((element) => {
+          if (element.checked) sex = element.value;
+        });
+
+        let zainteresowania = [];
+        document.querySelectorAll("input[type=checkbox]").forEach((element) => {
+          if (element.checked && element.id != "opis")
+            zainteresowania.push(element.value);
+        });
+
+        wszystko.innerHTML += `imię: ${imie.value} </br> nazwisko: 
+                                ${nazwisko.value}
+                                </br> płeć: ${sex} </br>
+                                stan cywilny: ${stan_cywilny.value} </br>
+                                zainteresowania: ${zainteresowania.join(
+                                  ", "
+                                )} </br>
+                                opis: ${
+                                  document.querySelector("textarea").value
+                                }`;
+      });
+    </script>
+  </body>
+</html>
