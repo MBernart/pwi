@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .kolor {
+        width: 100%;
+        height: 100px;
+        background-color: blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text"></div>
+    <button id="btn">przycisk</button>
+    <script>
+      function one() {
+        alert("Dziękuję!!!");
+      }
+      function two() {
+        let elem = document.createElement("div");
+        elem.innerText = "tekst w divie :)";
+        elem.classList.add("kolor");
+        let elem2 = document.querySelector(".text");
+        elem2.appendChild(elem);
+      }
+      btn.addEventListener("click", one);
+      btn.addEventListener("click", two);
+    </script>
+  </body>
+</html>
