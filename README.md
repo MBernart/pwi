@@ -1,2 +1,2 @@
 # pwi
-Zadanka z pracowni witryn internetowych!!!
+Zadanka z pracowni witryn internetowych!
