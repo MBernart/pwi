@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styl.css" />
+    <title>Mateusz Bernart Sprawdzian</title>
+  </head>
+  <body>
+    <head lang="pl">
+      nagłówek
+    </head>
+    <nav>
+      <div>Menu_1</div>
+      <div>Menu_2</div>
+      <div>Menu_3</div>
+      <div>Menu_4</div>
+    </nav>
+    <section lang="pl">
+      <p class="ukryty">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+        possimus ipsum deleniti eius et cumque sapiente tempora incidunt?
+        Ducimus repellendus consequatur cum ad nobis, rerum numquam
+        exercitationem ut consectetur libero. Lorem ipsum, dolor sit amet
+        consectetur adipisicing elit. Odio nostrum laborum enim nulla eveniet
+        nihil tenetur rerum, hic sunt accusantium maiores impedit corporis
+        perferendis doloribus fugiat ex voluptatibus, neque ad.
+      </p>
+    </section>
+    <footer lang="pl">Mateusz Bernart</footer>
+    <script>
+      document.querySelectorAll("nav div").forEach((elem) => {
+        elem.addEventListener("mouseover", () => {
+          document.querySelector("section > p").classList.remove("ukryty");
+          elem.classList.add("przezroczystosc");
+        });
+        elem.addEventListener("mouseout", () => {
+          document.querySelector("section > p").classList.add("ukryty");
+          elem.classList.remove("przezroczystosc");
+        });
+      });
+    </script>
+  </body>
+</html>
