@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">sprawdź kolor</button>
+    <p></p>
+    <script>
+      btn.addEventListener("click", () => {
+        let zmienna1 =
+          Math.floor(Math.random() * 16).toString(16) +
+          Math.floor(Math.random() * 16).toString(16);
+        let zmienna2 =
+          Math.floor(Math.random() * 16).toString(16) +
+          Math.floor(Math.random() * 16).toString(16);
+        let zmienna3 =
+          Math.floor(Math.random() * 16).toString(16) +
+          Math.floor(Math.random() * 16).toString(16);
+        let colour = `#${zmienna1}${zmienna2}${zmienna3}`;
+        let akapit = document.getElementsByTagName("p")[0];
+        akapit.style.backgroundColor = colour;
+        akapit.textContent = colour;
+        document.body.append(akapit);
+      });
+      document.body.onkeyup = (e) => {
+        if (e.keyCode == 32)
+          document.body.style.backgroundColor = document.querySelector(
+            "p"
+          ).textContent;
+      };
+    </script>
+  </body>
+</html>
