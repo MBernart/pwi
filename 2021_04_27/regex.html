@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="password" id="pass" />
+    <script>
+      pass.onkeyup = (e) => {
+        if (e.key == "Enter") {
+          let password = document.getElementById("pass").value;
+          let regex = /^[^A]\d{4}\s[a-z]{2,5}Y$/;
+          new regex2() = new RegExp("[^A]\\d{4}\\s[a-z]{2,5}Y", "g");
+          if (regex.test(password))
+            document.getElementsByTagName("p")[0].textContent =
+              "Superowe hasło!";
+          else
+            document.getElementsByTagName("p")[0].textContent =
+              "Walidacja hasła zwróciła wartość false";
+        }
+      };
+    </script>
+  </body>
+</html>
