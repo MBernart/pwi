@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let ile = prompt("do ilu?");
+      let n = 0;
+      function func() {
+        if (n < ile) {
+          let nowy = document.createElement("p");
+          nowy.textContent = n + 1;
+          n += 1;
+          document.body.append(nowy);
+        }
+      }
+      setInterval(func, 100);
+    </script>
+  </body>
+</html>
