@@ -58,7 +58,7 @@ header > #logodiv {
 #baner {
   width: 100%;
   margin: 0px;
-  height: 300px;
+  height: auto;
   padding: 0%;
 }
 
@@ -68,4 +68,47 @@ header > #logodiv {
 }
 footer {
   background-color: burlywood;
+}
+#onas div div {
+  width: 45%;
+  /* margin-left: 2.5%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#onas div div:nth-of-type(2){
+  margin-left: 10%;
+}
+#onas div {
+  display: flex;
+}
+#onasobrazek img {
+  width: 100%;
+}
+.absolutnaKasia {
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  right: 0px;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+.hidden {
+  height: 100vh;
+  overflow: hidden;
+}
+.napisAbsolutnejKasi {
+  top: 0px;
+  display: block !important; 
+  position: absolute;
+  justify-content: center;
+  z-index: 1012340410324;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  font-size: 5em;
+  color: white;
+  font-family: fantasy;
 }
