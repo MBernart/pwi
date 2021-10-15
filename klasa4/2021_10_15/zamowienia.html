@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl4.css">
+    <title>Hurtownia</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="logo.png" alt="Hurtownia">
+        </div>
+        <nav>
+            <a href="index.html">Strona główna</a>
+            <a href="zamowienia.html">Zamówienia</a>
+            <a href="blog.html">Blog o kwanie</a>
+            <a href="htttp://gatunki-kawy.pl" target="_blank">"Odwiedź także</a>
+        </nav>
+    </header>
+    <div id="baner">
+        <h1>Hurtowania kawy</h1>
+    </div>
+    <main>
+        <div class="menu-element">
+            <h2>Oferta</h2>
+            <ol>
+                <li>Kawa palona Arabica</li>
+                <li>Kawa palona Robusta</li>
+                <li>Kawa bezkofeinowa</li>
+                <li>Kawa zielona</li>
+            </ol>
+        </div>
+        <div class="menu-element">
+            <p>Podaj numer kawy: </p> <br>
+            <input type="number" name="numer-kawy" id="numer-kawy"> <br>
+            <p>Podaj wagę w dekagramach:</p> <br>
+            <input type="number" name="waga-kawy" id="waga-kawy"> <br><br>
+            <button>Zamów</button>
+            <p id="wynik"></p>
+        </div>
+    </main>
+    <footer>
+        Stronę przygotował: <b>Mateusz</b>
+    </footer>
+    <script>
+        let button = document.getElementsByTagName("button")[0];
+        console.log(button);
+        button.addEventListener("click", () => {
+            let numer_kawy = parseInt(document.getElementById("numer-kawy").value);
+            let waga_kawy = parseInt(document.getElementById("waga-kawy").value);
+            let kawy = Array([], ["Kawa palona Arabica", 5], ["Kawa Palona Robusta", 7], ["Kawa bezkofeinowa", 6]);
+            let cena_kawy = 0;
+            if (numer_kawy <= 3 && numer_kawy >= 1)
+                cena_kawy = waga_kawy * kawy[numer_kawy][1];
+            wynik.innerText = `Koszt zamówienia wynosi ${cena_kawy} zł`;
+
+        });
+    </script>
+</body>
+
+</html>
