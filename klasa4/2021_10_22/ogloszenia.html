@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal ogłoszeniowy</title>
+    <link rel="stylesheet" href="styl5.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Portal Ogłoszeniowy</h1>
+    </header>
+    <main>
+        <div id="panele-informacyjne">
+            <div class="panel-informacyjny"><img src="logo-male.png" alt=""></div>
+            <div class="panel-informacyjny">
+                <h3>Adres</h3>
+                <p>ul. Morska 45 Gdynia</p>
+            </div>
+            <div class="panel-informacyjny">
+                <h3>
+                    telefon
+                    <p>601601061</p>
+                </h3>
+            </div>
+            <div class="panel-informacyjny">
+                <h3>e-mail</h3>
+                <p>ogloszenia@poczta.pl</p>
+            </div>
+        </div>
+        <div id="panele-dolne">
+            <div id="panel-lewy">
+                <h2>Ceny ogłoszeń</h2>
+
+                <table>
+                    <tr>
+                        <td>Liczba ogłoszeń</td>
+                        <td>Cena ogłoszenia</td>
+                        <td>Bonus</td>
+                    </tr>
+                    <tr>
+                        <td>1 - 50</td>
+                        <td> 2 PLN</td>
+                        <td rowspan="2">Subskrypcja newslettera to upust o 0,20 PLN na ogłoszenie</td>
+                    </tr>
+                    <tr>
+                        <td>51 i więcej</td>
+                        <td>1 PLN</td>
+
+                    </tr>
+                </table>
+            </div>
+            <div id="panel-srodkowy">
+                <h2>Witamy na stronie naszego portalu!</h2>
+                <img src="logo-duze.png" alt="ogłoszenia">
+            </div>
+            <div id="panel-prawy">
+                <h2>Ile kosztuje ogłoszenie?</h2>
+                Podaj liczbę ogłoszeń:
+                <input type="number" id="ilosc" min="1" value="1"> <br><br>
+                <input type="checkbox" id="newsletter">
+                Policz upust na newsletter: <br><br>
+                <button>Oblicz</button> <br>
+                <p id='outp'></p>
+            </div>
+        </div>
+    </main>
+    <footer>Portal ogłoszeniowy opracował:
+        010100110110110101100001011000110111101001101110011001010110101000100000011010110110000101110111011101010111001101101001
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
