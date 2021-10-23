@@ -1,59 +1,60 @@
-*{
-margin: 0;
+* {
+  margin: 0;
 }
 
-header{
-    background-color: #009999;
-                color: white;
-text-align: center;
-            height: 80px;
+header {
+  background-color: #009999;
+  color: white;
+  text-align: center;
+  height: 80px;
 }
 
 #panele-informacyjne {
-    display: flex;
+  display: flex;
 }
 
 .panel-informacyjny {
-                      font-family: Arial, Helvetica, sans-serif;
-    background-color: #009999;
-color: white;
-                    text-align: center;
-width: 25%;
-                height: 150px;
-        
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #009999;
+  color: white;
+  text-align: center;
+  width: 25%;
+  height: 150px;
 }
 
 #panele-dolne {
-    display: flex;
+  display: flex;
 }
 
-#panel-lewy, #panel-prawy {
-            background-color: #669999;
-        width: 30%;         height: 600px;
+#panel-lewy,
+#panel-prawy {
+  background-color: #669999;
+  width: 30%;
+  height: 600px;
 }
 
-#panel-srodkowy{
-                background-color: #99cccc;
-        width: 40%;
-                        height: 600px;
-                text-align: center;
+#panel-srodkowy {
+  background-color: #99cccc;
+  width: 40%;
+  height: 600px;
+  text-align: center;
 }
 
 footer {
-                background-color: #009999;
-        color: white;
-            text-align: right;
+  background-color: #009999;
+  color: white;
+  text-align: right;
 }
 
-table, td {
-                border: 1px solid green;
-        text-align: center;
+table,
+td {
+  border: 1px solid green;
+  text-align: center;
 }
 
 button {
-    border: none;
-            padding: 10px;
-                    background-color: green;
-        color: white;
+  border: none;
+  padding: 10px;
+  background-color: green;
+  color: white;
 }
-
