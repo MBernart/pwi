@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl1.css">
+    <title>Kalkulator spalania - Moto kalkulator</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <menu>
+
+            <div>
+                <a href="index.html">Strona główna</a>
+            </div>
+            <div><a href="koszt_dojazdu.html">Koszt dojazdu</a>
+            </div>
+        </menu>
+    </header>
+    <main>
+        <h1>Kalkulator spalania</h1>
+        <!-- TODO:// SKRYPT -->
+        <br><br>
+        Ilosc spalonego paliwa:
+        <input type="number" name="litry" id="litry" value="0"> <br><br>
+        Liczba przejechanych kilometrów:
+        <input type="number" name="km" id="km" value="0">
+        <br><br>
+        <button>Oblicz</button>
+
+        <div id="output">
+            <p id='output_p'>
+
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p>Stronę wykonał: Mateusz Bernart</p>
+    </footer>
+    <script>
+        document.getElementsByTagName("button")[0].addEventListener('click', () => {
+            let ilosc_paliwa = parseFloat(litry.value);
+            let liczba_km = parseInt(km.value)
+
+            if (liczba_km > 0 && ilosc_paliwa > 0) {
+                output_p.innerText = 100 * (ilosc_paliwa / liczba_km);
+            }
+            else {
+                output_p.innerHTML = "<strong>Ale to nie ma sensu!</strong> <br> Uzupełnij powyższe pola wartościami dodatnimi!!!";
+            }
+        });
+    </script>
+</body>
+
+</html>

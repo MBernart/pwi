@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl1.css">
+    <title>Kalkulator kosztów dojazdu - Moto kalkulator</title>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <menu>
+
+            <div>
+                <a href="index.html">Strona główna</a>
+            </div>
+            <div><a href="spalanie.html">Spalanie</a>
+            </div>
+        </menu>
+    </header>
+    <main>
+        <h1>Kalkulator kosztów dojazdu</h1>
+        <br><br>
+        Średnie spalanie: 
+        <input type="number" id="srednie_spalanie" value="0">
+        <br><br>
+        Koszt paliwa: 
+        <input type="number" id="aktualna_cena_paliwa" value="0">
+        <br><br>
+        Długość trasy: 
+        <input type="number" id="planowana_dlugosc_trasy" value="0">
+        <br><br>
+        <button>Oblicz</button>
+        <div id="output">
+            <p id='output_p'>
+            </p>
+        </div>
+    </main>
+    <footer>
+        <p>Stronę wykonał: Mateusz Bernart</p>
+    </footer>
+    <script>
+        document.getElementsByTagName("button")[0].addEventListener('click', () => {
+            let spalanie = parseFloat(srednie_spalanie.value);
+            let cena_paliwa = parseInt(aktualna_cena_paliwa.value)
+            let dlugosc_trasy = parseInt(planowana_dlugosc_trasy.value)
+
+            if (spalanie > 0 && cena_paliwa > 0 && dlugosc_trasy > 0) {
+                output_p.innerText = "Koszt dojazdu wyniesie: " + (spalanie / 100) * dlugosc_trasy * cena_paliwa + "zł";
+            }
+            else {
+                output_p.innerHTML = "<strong>Ale to nie ma sensu!</strong> <br> Uzupełnij powyższe pola wartościami dodatnimi!!!";
+            }
+        });
+    </script>
+</body>
+
+</html>
