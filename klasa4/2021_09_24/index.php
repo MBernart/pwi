@@ -21,7 +21,7 @@
             <h1>BAZA FILMÓW</h1>
         </div>
         <div class="header-element">
-            <form action="" method="post">
+            <form action="." method="post">
                 <select name="gatunek">
                     <option value="Sci-Fi">Sci-Fi</option>
                     <option value="animacja">animacja</option>
@@ -43,7 +43,7 @@
                             `filmy` 
                         JOIN `gatunki` 
                             ON `filmy`.`gatunki_id` = `gatunki`.`id` 
-                        WHERE `gatunki`.`nazwa` = 'komedia'";
+                        WHERE `gatunki`.`nazwa` = '$_POST[gatunek]'";
                 $result = $connection->query($sql);
                 foreach ($result as $row) {
                     echo "<p>Tytuł: $row[tytul], Rok produkcji: $row[rok], Ocena: $row[ocena]</p>";
