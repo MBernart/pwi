@@ -1,0 +1,9 @@
+kw1.
+SELECT `tytul`, `rok`, `ocena` FROM `filmy` JOIN `gatunki` ON `filmy`.`gatunki_id` = `gatunki`.`id` WHERE `gatunki`.`nazwa` = 'komedia';
+kw2.
+SELECT `filmy`.`id`, `tytul`, `rezyserzy`.`imie`, `rezyserzy`.`nazwisko` FROM `filmy` JOIN `rezyserzy` ON `filmy`.`rezyserzy_id` = `rezyserzy`.`id`;
+
+kw3.
+SELECT `id`, `tytul` FROM `filmy` WHERE `filmy`.`ocena` = 6 AND `filmy`.`rok` = 2017;
+kw4.
+UPDATE `rezyserzy` SET `imie`='Francis',`nazwisko`='Ford' WHERE `id` = 8;
