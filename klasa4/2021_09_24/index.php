@@ -11,7 +11,7 @@
 
 <body>
     <?php
-        $connection = new mysqli('localhost', 'root', '', 'dane');
+        $connection = new mysqli('localhost', 'root', '', 'pwi_dane');
     ?>
     <header>
         <div class="header-element">
