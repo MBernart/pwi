@@ -1,0 +1,11 @@
+kw1.
+SELECT `id`, `nazwa`, `opis`, `cena` FROM `podzespoly` WHERE `podzespoly`.`cena` < 1000;
+
+kw2.
+SELECT `nazwa`, `opis` FROM `podzespoly` WHERE `podzespoly`.`dostepnosc` = 1 AND `podzespoly`.`producenci_id` = (SELECT `producenci`.`id` FROM `producenci` WHERE `producenci`.`nazwa` = 'Intel');
+
+kw3.
+SELECT `podzespoly`.`nazwa`, `producenci`.`nazwa` FROM `podzespoly` JOIN `producenci` ON `podzespoly`.`producenci_id` = `producenci`.`id`;
+
+kw4.
+UPDATE producenci SET `producenci`.`nazwa` = "PATRIOT" WHERE `producenci`.`nazwa` = "Patriot";
