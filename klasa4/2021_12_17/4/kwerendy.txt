@@ -1,0 +1,12 @@
+kw1.
+SELECT `id`, `dataWyjazdu`, `cel`, `cena` FROM `wycieczki` WHERE `dostepna`;
+
+kw2.
+SELECT `nazwaPliku`, `podpis` FROM `zdjecia` ORDER BY `zdjecia`.`podpis` ASC
+
+kw3.
+SELECT `zdjecia`.`nazwaPliku`, `wycieczki`.`cel` FROM `zdjecia` JOIN `wycieczki` ON `zdjecia`.`id` = `wycieczki`.`zdjecia_id` WHERE `wycieczki`.`cena` > 1000;
+
+kw4.
+ALTER TABLE `wycieczki` ADD COLUMN dataPrzyjazdu date CHECK(dataPrzyjazdu> `wycieczki`.`dataWyjazdu`);
+
