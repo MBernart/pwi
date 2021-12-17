@@ -1,0 +1,11 @@
+kw1
+SELECT `nazwa`, `opis`, `cena` FROM `podzespoly` WHERE `typy_id` = (SELECT `id` FROM `typy` WHERE `kategoria` = 'Procesor');
+
+kw2.
+SELECT `id`, `nazwa` FROM `podzespoly` WHERE `dostepnosc` = 1 AND `cena` < 400;
+
+kw3.
+SELECT `nazwa`, `kategoria` FROM `podzespoly` JOIN `typy` ON `podzespoly`.`typy_id` = `typy`.`id` WHERE `kategoria` = 'Procesor';
+
+kw4.
+ALTER TABLE `typy` ADD opis TEXT;

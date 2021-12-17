@@ -1,0 +1,21 @@
+kw1.
+SELECT `nazwa`, `potoczna`
+FROM `grzyby`
+WHERE `jadalny` = 1;
+
+kw2.
+SELECT `grzyby`.`nazwa`, `potoczna`, `rodzina`.`nazwa` as `nazwa_rodziny`
+FROM `grzyby`
+JOIN `potrawy`
+ON `grzyby`.`potrawy_id` = `potrawy`.`id`
+JOIN `rodzina` 
+ON  `grzyby`.`rodzina_id` = `rodzina`.`id`
+WHERE `potrawy`.`nazwa` = 'sos';
+
+kw3.
+SELECT `potoczna`, `nazwa_pliku` 
+FROM `grzyby`;
+
+kw4.
+ALTER TABLE `rodzina`
+ADD `opis` TEXT;
