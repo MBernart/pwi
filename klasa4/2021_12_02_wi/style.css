@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+}
+
+main{
+    width: 25%;
+    margin: auto;
+    color: darkslateblue;
+}
+main > h1 {
+    text-align: center;
+}
+li {
+    font-size: xx-large;
+}
+
+.ukryj {
+    display: none;
+}

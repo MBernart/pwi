@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+        
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1>Cztery rewolucje przemysłowe</h1>
+        <ul>
+            <li id='para'>Maszyna parowa
+                <p id='para-desc' class='ukryj'>Pierwsza rewolucja</p>
+            </li>
+            <li id='bulb'>Żarówka
+                <p id='bulb-desc' class='ukryj'>Druga rewolucja</p>
+            </li>
+            <li id='comp'>Komputer
+                <p id='comp-desc' class='ukryj'>Trzecia rewolucja</p>
+            </li>
+            <li id='AI'>Sztuczna inteligencja
+                <p id='AI-desc' class='ukryj'>Czwarta rewolucja... znaczy chyba</p>
+            </li>
+        </ul>
+    </main>
+
+    <script>
+        $(function () {
+            $('#para').click(() => {
+                $('#para-desc').toggle('normal');
+            });
+            $('#bulb').click(() => {
+                $('#bulb-desc').toggle('normal');
+            });
+            $('#comp').click(() => {
+                $('#comp-desc').toggle('normal');
+            });
+            $('#AI').click(() => {
+                $('#AI-desc').toggle('normal');
+            });
+        });
+    </script>
+</body>
+
+</html>
