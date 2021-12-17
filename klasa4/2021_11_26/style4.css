@@ -1,0 +1,50 @@
+* {
+  font-family: Helvetica;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+    display: flex;
+}
+
+header {
+  background-color: darkcyan;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+#styl-zycia {
+  background-color: lightseagreen;
+  text-align: center;
+  padding: 60px;
+}
+
+section:nth-of-type(1),
+section:nth-of-type(2) {
+    background-color: teal;
+    color: white;
+    text-align: center;
+    height: 350px;
+    width: 25%;
+}
+
+
+section:nth-of-type(3) {
+    background-color: teal;
+    height: 350px;
+    width: 50%;
+}
+
+footer{
+    background-color: darkcyan;
+    color: white;
+    padding: 40px;
+}
+
+ul {
+    border: 4px dotted rgb(127, 255, 212);
+}

@@ -1,0 +1,15 @@
+zapytanie 1.
+SELECT `id`, `gatunek`, `wystepowanie` FROM `zwierzeta` 
+WHERE `odzywianie_id` = (SELECT id FROM odzywianie 
+WHERE `rodzaj` = 'wszystkozerny');
+
+zapytanie 2.
+SELECT `zwierzeta`.`gatunek`, `odzywianie`.`rodzaj` 
+FROM `zwierzeta` JOIN `odzywianie` ON `zwierzeta`.`Odzywianie_id` = `odzywianie`.`id`;
+
+zapytanie 3.
+SELECT COUNT(*) FROM `zwierzeta` 
+WHERE `odzywianie_id` = (SELECT `id` FR
+
+zapytanie 4.
+CREATE USER 'JanKowalski' IDENTIFIED BY PASSWORD 'J4nKow';
