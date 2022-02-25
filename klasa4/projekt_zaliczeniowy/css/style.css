@@ -1,0 +1,53 @@
+body a:hover {
+  color: rgb(100, 10, 20);
+  transition: 1s;
+}
+
+a {
+  color: #4d3621;
+}
+
+nav a:hover {
+  color: rgb(150, 80, 20); /* TODO: select proper colour */
+  font-size: 110%;
+  transition: 1s;
+}
+
+header,
+#header-holder {
+  height: 100px;
+  opacity: 100;
+  transition: 0.5s;
+}
+
+body {
+  background-color: #bbac9b;
+}
+
+section {
+  visibility: hidden;
+}
+
+.increaseOnHover:hover {
+  transform: scale(1.15);
+  transition: transform 1s;
+}
+
+@-webkit-keyframes animat_show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  visibility: visible !important;
+  -webkit-animation: animat_show 1s;
+  animation: animat_show 1s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
