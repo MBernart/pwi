@@ -1,3 +1,7 @@
+body {
+  color: #4d3621;
+}
+
 body a:hover {
   color: rgb(100, 10, 20);
   transition: 1s;
@@ -5,6 +9,14 @@ body a:hover {
 
 a {
   color: #4d3621;
+}
+
+img {
+  opacity: 0.8;
+}
+
+#img-o-nas {
+  max-height: 450px;
 }
 
 nav a:hover {
@@ -21,7 +33,7 @@ header,
 }
 
 body {
-  background-color: #bbac9b;
+  /* background-color: #bbac9b; */
 }
 
 section {
@@ -44,10 +56,50 @@ section {
 
 .fadeIn {
   visibility: visible !important;
-  -webkit-animation: animat_show 1s;
   animation: animat_show 1s;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.carousel-item img {
+  max-height: 300px;
+  margin: auto;
+}
+
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+  filter: invert(50%);
+}
+
+#show-map {
+  color: #4d3621;
+  font-weight: bolder;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 3px;
+  transition: 1s;
+}
+
+#show-map:hover {
+  text-decoration: underline solid #4d3621 20%;
+  transition: 1s;
+}
+
+.show-map {
+  opacity: 100% !important;
+}
+
+.big-photo {
+  max-width: 85vw !important;
+  max-height: 85vh !important;
+}
+
+.social-media {
+  font-size: 150%;
+}
+
+.hide {
+  display: none;
 }
