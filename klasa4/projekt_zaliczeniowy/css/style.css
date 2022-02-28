@@ -103,3 +103,7 @@ html {
 .hide {
   display: none;
 }
+
+.nav-item {
+  font-size: 125%;
+}

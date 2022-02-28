@@ -39,18 +39,27 @@
                 <h3>O nas</h3>
                 <div class="row ms-1 align-items-center">
                     <span class="col align-text-center">
-                        <p>
-                            <!-- http://la-cafe.pl/onas/ -->
-                            Loka Coffee to klimatyczna kawiarnia w której dobrze zjesz, wypijesz kawę parzoną przez baristów, skosztujesz piw rzemieślniczych oraz rozsmakujesz się w świeżo pieczonych, domowych ciastach - znajdująca się w Stęszewie przy ulicy Dworcowej.
-
-                        </p>
-                        <p>
-                            <!-- http://la-cafe.pl/onas/ -->
-                            Przy wypieku ciast stawiamy na tradycyjne receptury które pamiętają czasy naszych prababci. Dania ciepłe, które oferujemy to połączenie różnych kuchni – nie boimy się eksperymentować; a kawę parzymy wyłącznie z wyselekcjonowanych ziaren sprawdzonych odmian.
-                        </p>
+                        <!-- soruce: http://la-cafe.pl/onas/ -->
+                        <?php
+                        $sql = "SELECT * FROM `text_fields` WHERE `text_fields`.`section` = 'o-nas' ORDER BY `text_fields`.`paragraphs_order` ASC";
+                        $result = $connection->query($sql);
+                        foreach ($result as $row)
+                        {
+                            echo "<p>";
+                            echo $row['content'];
+                            echo "</p>";
+                        }
+                        ?>
                     </span>
                     <div class="col d-flex align-items-center justify-content-center">
-                        <img id="img-o-nas" class="img-fluid rounded increaseOnHover" src="assets/kawa-i-ciasta.jpg" alt="nasze-zdjecie">
+                        <?php
+                        $sql = "SELECT * FROM `images` WHERE `section_name` = 'o-nas'";
+                        $result = $connection->query($sql);
+                        $row = $result->fetch_assoc();
+                        echo <<< LABEL
+                        <img id="img-o-nas" class="img-fluid rounded increaseOnHover" src="assets/kawa-i-ciasta.jpg" alt="$row[alt]">
+LABEL;
+                        ?>
                     </div>
                 </div>
             </section>
@@ -127,7 +136,11 @@
                     </table>
                     <p class="text-center">
                         <em>
-                            Do każdej dużej kawy - kostka ciasta za pół ceny
+                            <?php
+                            $sql = "SELECT * FROM `text_fields` WHERE `text_fields`.`section` = 'pod-menu' ORDER BY `text_fields`.`paragraphs_order` ASC";
+                            $result = $connection->query($sql);
+                            echo $result->fetch_assoc()['content'];
+                            ?>
                         </em>
                     </p>
                 </span>
@@ -171,19 +184,39 @@
                             <span>
                                 <h6> <b> Numer telefonu: </b></h6>
                                 <p>
-                                    +48 123 456 789</p>
+                                    <?php
+                                    $sql = "SELECT * FROM `text_fields` WHERE `text_fields`.`section` = 'numer-telefonu' ORDER BY `text_fields`.`paragraphs_order` ASC";
+                                    $result = $connection->query($sql);
+                                    echo $result->fetch_assoc()['content'];
+                                    ?>
+                                </p>
                             </span>
                         </div>
                         <div class="row">
                             <span>
                                 <h6> <b> Adres mailowy: </b> </h6>
-                                <p><a href="mailto:info@lcaffee.com">info@lcaffee.com</a></p>
+                                <p>
+                                    <?php
+                                    $sql = "SELECT * FROM `text_fields` WHERE `text_fields`.`section` = 'mail' ORDER BY `text_fields`.`paragraphs_order` ASC";
+                                    $result = $connection->query($sql);
+                                    $mail = $result->fetch_assoc()['content'];
+                                    echo "<a href='mailto:$mail'>$mail</a>";
+                                    ?>
+
+                                </p>
                             </span>
                         </div>
                         <div class="row">
                             <span>
                                 <h6> <b> Adres: </b></h6>
-                                <p>Dworcowa 2c, <br> 62-060 Stęszew<br> <span id="show-map">Pokaż mapę</span> </p>
+                                <p>
+                                    <?php
+                                    $sql = "SELECT * FROM `text_fields` WHERE `text_fields`.`section` = 'adres' ORDER BY `text_fields`.`paragraphs_order` ASC";
+                                    $result = $connection->query($sql);
+                                    echo $result->fetch_assoc()['content'];
+                                    ?>
+                                    <span id="show-map">Pokaż mapę</span>
+                                </p>
                             </span>
                         </div>
 
@@ -191,18 +224,20 @@
                             <span>
                                 <table>
                                     <th colspan="2">Godziny otwarcia:</th>
-                                    <tr>
-                                        <td>pon-pt</td>
-                                        <td>10-18</td>
+                                    <?php
+                                    $sql = "SELECT * FROM `text_fields` WHERE `text_fields`.`section` = 'godziny-otwarcia' ORDER BY `text_fields`.`paragraphs_order` ASC";
+                                    $result = $connection->query($sql);
+                                    foreach ($result as $row)
+                                    {
+                                        $hours_data = explode(";", $row['content']);
+                                        echo <<< LABEL
+                                   <tr>
+                                        <td>$hours_data[0]</td>
+                                        <td>$hours_data[1]</td>
                                     </tr>
-                                    <tr>
-                                        <td>sob</td>
-                                        <td>9-23</td>
-                                    </tr>
-                                    <tr>
-                                        <td>niedz</td>
-                                        <td>11-17</td>
-                                    </tr>
+LABEL;
+                                    }
+                                    ?>
                                 </table>
                                 <p></p>
                             </span>

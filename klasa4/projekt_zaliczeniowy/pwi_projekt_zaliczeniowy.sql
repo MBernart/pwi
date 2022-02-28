@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2022 at 12:09 AM
+-- Generation Time: Feb 28, 2022 at 07:29 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.0
 
@@ -96,7 +96,36 @@ INSERT INTO `images` (`id`, `path`, `alt`, `section_name`) VALUES
 (4, 'assets/slide4.jpg', 'slide4', 'slider'),
 (5, 'assets/slide5.jpg', 'slide5', 'slider'),
 (6, 'assets/slide6.jpg', 'slide6', 'slider'),
-(7, 'assets/slide7.jpg', 'slide7', 'slider');
+(7, 'assets/slide7.jpg', 'slide7', 'slider'),
+(8, 'assets/kawa-i-ciasta.jpg', 'Kawa i ciasta', 'o-nas');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `text_fields`
+--
+
+CREATE TABLE `text_fields` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `content` text NOT NULL,
+  `section` varchar(64) NOT NULL,
+  `paragraphs_order` tinyint(3) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `text_fields`
+--
+
+INSERT INTO `text_fields` (`id`, `content`, `section`, `paragraphs_order`) VALUES
+(1, 'Loka Coffee to klimatyczna kawiarnia w której dobrze zjesz, wypijesz kawę parzoną przez baristów, skosztujesz piw rzemieślniczych oraz rozsmakujesz się w świeżo pieczonych, domowych ciastach - znajdująca się w Stęszewie przy ulicy Dworcowej.\r\n', 'o-nas', 1),
+(2, 'Przy wypieku ciast stawiamy na tradycyjne receptury które pamiętają czasy naszych prababci. Dania ciepłe, które oferujemy to połączenie różnych kuchni – nie boimy się eksperymentować; a kawę parzymy wyłącznie z wyselekcjonowanych ziaren sprawdzonych odmian.\r\n', 'o-nas', 2),
+(3, '+48 123 456 789', 'numer-telefonu', NULL),
+(4, 'info@lcaffee.com', 'mail', NULL),
+(5, 'Dworcowa 2c, <br> 62-060 Stęszew<br> ', 'adres', NULL),
+(6, 'pon-pt;10-18', 'godziny-otwarcia', 1),
+(7, 'sobota;9-23', 'godziny-otwarcia', 2),
+(8, 'niedziela;11-17', 'godziny-otwarcia', 3),
+(9, 'Do każdej dużej kawy - kostka ciasta za pół ceny', 'pod-menu', NULL);
 
 --
 -- Indexes for dumped tables
@@ -121,6 +150,12 @@ ALTER TABLE `images`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `text_fields`
+--
+ALTER TABLE `text_fields`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -140,7 +175,13 @@ ALTER TABLE `coffee`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `text_fields`
+--
+ALTER TABLE `text_fields`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
